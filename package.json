@@ -1,0 +1,21 @@
+{
+  "name": "tstSimple",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "joi": "^14.0.4",
+    "nodemon": "^1.18.6"
+  },
+  "devDependencies": {
+    "redis": "^2.8.0",
+    "redis-rejson": "^1.0.0"
+  }
+}

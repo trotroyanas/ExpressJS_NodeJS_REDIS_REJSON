@@ -1,0 +1,28 @@
+nodemon app.js
+
+
+url od doc for docker redis-Rejson
+https://hub.docker.com/r/redislabs/rejson/
+
+
+//Install docker redis with Rejson
+1. Running with Docker
+docker run -d -p 6379:6379 --name redis-rejson redislabs/rejson:latest
+
+2. Connecting:
+docker exec -it redis-rejson bash
+
+# redis-cli
+# 127.0.0.1:6379> 
+
+3. Add a new JSON value:
+# 127.0.0.1:6379> JSON.SET obj . '{"name":"John Doe","lastSeen":1478476800,"loggedOut": true}'
+OK
+
+4. Get object names and value for "loggedOut" attribute in the document:
+# 127.0.0.1:6379> JSON.OBJKEYS obj .
+1) "name"
+2) "lastSeen"
+3) "loggedOut"
+# 127.0.0.1:6379> JSON.GET obj .loggedOut
+"true"
